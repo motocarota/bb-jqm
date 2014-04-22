@@ -1,0 +1,9 @@
+<div data-role="content">
+	<h1>Lista</h1>
+	<ul data-role="listview" data-inset="true">
+		<li data-role="list-divider">Items</li>
+		<% _.each( app.data.list.toJSON(), function( item ){ %>
+			<li><a href='#detail-<%= item.id %>'><%= item.name %></a></li>
+		<% } ); %>
+	</ul>
+</div>
